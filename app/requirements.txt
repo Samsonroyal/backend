@@ -9,3 +9,4 @@ python-dotenv
 django-filter
 django-nextjs
 markdown
+gunicorn==21.2.0
