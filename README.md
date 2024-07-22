@@ -43,6 +43,8 @@ Here are the steps to install and run the project:
 8. docker-compose -f docker-compose.yml logs -f
 9. PLease find more instructions and commands in this [documentaion 1](https://testdriven.io/blog/deploying-django-to-digitalocean-with-docker-and-github-actions/)and [documentation 2](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
 
+## API URL = http://137.184.113.226/
+
 ## Usage
 
 Here's how to use the project functionalities:
