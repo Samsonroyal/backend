@@ -22,19 +22,22 @@ RUN apt-get update \
 # install dependencies
 RUN pip install --upgrade pip
 
-COPY ./app/requirements.txt /requirements.txt
+COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
-COPY ./app/compose/local/django/entrypoint /entrypoint
+COPY ./compose/production/django/entrypoint /entrypoint
 RUN sed -i 's/\r$//g' /entrypoint
 RUN chmod +x /entrypoint
+# RUN chown django /entrypoint
 
-COPY ./app/compose/local/django/start /start
+COPY ./compose/production/django/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
+# RUN chown django /start
+
 
 # copy project
 COPY . .
 
 # run entrypoint.sh
-ENTRYPOINT ["/usr/src/app/entrypoint.prod.sh"]
+ENTRYPOINT ["/entrypoint"]
