@@ -28,6 +28,23 @@ Here are the steps to install and run the project:
 3. Install dependencies ...
 4. Run the project ...
 
+
+## Installation with Docker
+
+Here are the steps to install and run the project:
+
+1. Clone the repository ...
+2. Checkout to "feature" branch
+3. Install dependencies ...
+4. Install [docker](https://docs.docker.com/engine/install/) on your machine 
+5. Open terminal in your project and run ...
+6. `docker-compose -f docker-compose.yml up -d --build`
+7. Open another terminal window and run ...
+8. docker-compose -f docker-compose.yml logs -f
+9. PLease find more instructions and commands in this [documentaion 1](https://testdriven.io/blog/deploying-django-to-digitalocean-with-docker-and-github-actions/)and [documentation 2](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
+
+## API URL = http://137.184.113.226/
+
 ## Usage
 
 Here's how to use the project functionalities:
