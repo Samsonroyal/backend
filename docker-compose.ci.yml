@@ -42,5 +42,6 @@ services:
       POSTGRES_DB: clearpath_dev
 
 volumes:
+  postgres_data:
   static_volume:
   media_volume:
