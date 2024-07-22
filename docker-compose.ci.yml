@@ -37,9 +37,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      POSTGRES_USER: usafe_api
-      POSTGRES_PASSWORD: usafe_api
-      POSTGRES_DB: usafe_api_dev
+      POSTGRES_USER: clearpath_home
+      POSTGRES_PASSWORD: clearpath_home
+      POSTGRES_DB: clearpath_home
 
 volumes:
   postgres_data:
