@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.8"
 
 services:
   web:
@@ -8,7 +8,7 @@ services:
       cache_from:
         - "${WEB_IMAGE}"
     image: "${WEB_IMAGE}"
-    command: gunicorn hello_django.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn clearpath_home.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
@@ -37,9 +37,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      POSTGRES_USER: clearpath
-      POSTGRES_PASSWORD: clearpath
-      POSTGRES_DB: clearpath_dev
+      POSTGRES_USER: usafe_api
+      POSTGRES_PASSWORD: usafe_api
+      POSTGRES_DB: usafe_api_dev
 
 volumes:
   postgres_data:
